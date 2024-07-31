@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+        
+        <title>Javascript</title> 
+        <script>
+            /*
+            Define function functionname(Pass Parameter){
+                return value;
+            }*/
+            
+            function update(){
+                document.getElementById('upd').innerHTML=document.getElementById('txtname').value;
+            }
+         
+            function checkFormData(){
+                //Query all elements that tag name as input
+                var inputs = document.getElementsByTagName("input");
+                
+                var message = "Form Elements\n\n";
+                
+                for (var i=0; i< inputs.length;i++){
+                    if (inputs[i].getAttribute('type') == 'text')
+                    {
+                        message += inputs [i].getAttribute('name')+ " : ";
+                        message += inputs [i].value +"\n";
+                    }
+                }
+                alert(message);
+                alert("Name : "+document.getElementById("txtname").value);
+                alert("Email :"+document.getElementById("txtemail").value);
+            }
+            
+        </script>
+    
+    </head>
+    
+    <body>
+        
+        <div>
+            
+            <h1>Javascript</h1>
+            
+            <p id="upd">sfasdf </p>
+                      
+            
+            <form name="user" id="userfrm" action="#">
+                
+                Your Name: <input type="text" id="txtname" name="Name" onkeypress="update();" />
+                
+                Your Email: <input type="text" id="txtemail" name="Email" />
+                
+                <input type="button" name="submit" value="Submit" onclick="checkFormData();"/>
+            
+            </form>
+        
+        </div>
+    
+    </body>
+
+
+</html>

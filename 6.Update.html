@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+        
+        <title>Javascript</title> 
+        <script>
+            /*
+            Define function functionname(Pass Parameter){
+                return value;
+            }*/
+         
+            function update(){
+                document.getElementById('txtvalue').innerHTML=document.getElementById('txtname').value;
+            }
+            
+        </script>
+    
+    </head>
+    
+    <body>
+        
+        <div>
+            
+            <h1>Javascript</h1>
+            <p id="txtvalue">asdgasd</p>
+            
+            
+            <form>
+                
+                <input type="text" id="txtname" onkeypress="update()"/>
+            
+            </form>
+        
+        </div>
+    
+    </body>
+
+
+</html>
